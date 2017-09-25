@@ -11,7 +11,7 @@ import { Component } from '@angular/core';
   // asociado al componente.
   templateUrl: './app.component.html',
   // En 'stylesUrls' indicampos las rutas de las hojas de estilos 
-  // que utilizará el componente. 
+  // que aplicarán al componente. 
   styleUrls: ['./app.component.css']  // aqui podriamos colocar .scss
 })
 export class AppComponent { }
