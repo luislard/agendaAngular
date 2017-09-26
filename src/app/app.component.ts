@@ -16,6 +16,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
+  nombres: string[] = [
+    'Bob Esponja',
+    'Elon Musk',
+    'Steve Jobs',
+    'Bill Gates',
+    'Sundar Picagai',
+    'Steve Wozniak',
+
+  ];
+
   constructor(){
     console.log('Estoy en el constructor');
   }
