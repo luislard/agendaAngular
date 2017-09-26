@@ -15,8 +15,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']  // aqui podriamos colocar .scss
 })
 export class AppComponent implements OnInit {
+
+  title: string;
+
   ngOnInit(): void {
-    console.log('estoy en el hook OnInit :-)');
+    // console.log('estoy en el hook OnInit :-)');
+    this.title = 'estoy en el hook OnInit :-)';
   }
 
 }
