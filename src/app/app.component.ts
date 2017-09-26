@@ -26,6 +26,15 @@ export class AppComponent implements OnInit {
 
   ];
 
+  nombres2: string[] = [
+    'Robocop',
+    'Goku',
+  ];
+
+  nombres3: string[] = [
+    'Rambo',
+  ];
+
   constructor(){
     console.log('Estoy en el constructor');
   }
