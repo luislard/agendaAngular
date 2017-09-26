@@ -1,3 +1,10 @@
-<p>
-  lista-contactos works!
-</p>
+<ul>
+  <!-- 
+    La directiva 'NgFor' itera por una colección dada
+    y por cada elemento añade la jerarquía de
+    etiquetas HTML sobre la cuál se esta usando.
+  -->
+  <li *ngFor="let contacto of contactos">
+    {{ contacto }}
+  </li>
+</ul>
