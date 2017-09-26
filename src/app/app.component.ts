@@ -16,11 +16,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  title: string;
+  constructor(){
+    console.log('Estoy en el constructor');
+  }
 
+  // el hook 'OnInit' se ejecuta cuando el componente tiene
+  // asociado su template correspondiente, por lo tanto es 
+  // el momento ideal para enlazar datos entre ellos
   ngOnInit(): void {
-    // console.log('estoy en el hook OnInit :-)');
-    this.title = 'estoy en el hook OnInit :-)';
+    console.log('estoy en el hook OnInit :-)');
   }
 
 }
