@@ -46,4 +46,8 @@ export class AppComponent implements OnInit {
     console.log('estoy en el hook OnInit :-)');
   }
 
+  eliminarContacto(nombre: string): void {
+    console.log(nombre);
+  }
+
 }
