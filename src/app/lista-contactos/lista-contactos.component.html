@@ -4,7 +4,11 @@
     y por cada elemento añade la jerarquía de
     etiquetas HTML sobre la cuál se esta usando.
   -->
-  <li *ngFor="let contacto of contactos">
+  <li *ngFor="let contacto of contactos" 
+    [class.rojo]="contacto.toLowerCase().startsWith('s')"
+    [class.verde]="contacto.toLowerCase().startsWith('b')"
+    [class.italicas]="contacto.toLowerCase().startsWith('s')"
+  >
     {{ contacto }}
     <!-- 
       La suscripcion a eventos se hace poniendo entre parentesis 
