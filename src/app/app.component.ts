@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 // con el decorador '@Component' otorgamos a la clase 
 // decorada comportamiento de componente.
@@ -14,4 +14,9 @@ import { Component } from '@angular/core';
   // que aplicarán al componente. 
   styleUrls: ['./app.component.css']  // aqui podriamos colocar .scss
 })
-export class AppComponent { }
+export class AppComponent implements OnInit {
+  ngOnInit(): void {
+    console.log('estoy en el hook OnInit :-)');
+  }
+
+}
