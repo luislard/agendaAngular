@@ -4,9 +4,10 @@
 <!-- 
   Para evaluar el valor de un atributo previamente 
   a su asignación, debemos poner 
-  entre corchetes el nombe del atributo
+  entre corchetes el nombe del atributo.
+  Si queremos recoger los datos que vienen dados en un evento,
+  utilizamos la pabra reservada '$event'
 --> 
-<app-lista-contactos [contactos]="nombres"></app-lista-contactos>
-<app-lista-contactos [contactos]="nombres2"></app-lista-contactos>
-<app-lista-contactos [contactos]="['Uno','Dos','Tres']"></app-lista-contactos>
-<app-lista-contactos [contactos]="nombres.slice(0,1)"></app-lista-contactos>
+<app-lista-contactos 
+[contactos]="nombres"
+(botonEliminarPulsado)="eliminarContacto($event)"></app-lista-contactos>

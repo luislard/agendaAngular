@@ -6,5 +6,10 @@
   -->
   <li *ngFor="let contacto of contactos">
     {{ contacto }}
+    <!-- 
+      La suscripcion a eventos se hace poniendo entre parentesis 
+      el nombre del mismo.
+    --> 
+    <button (click)="notificarEliminacionContacto(contacto)">Eliminar</button>
   </li>
 </ul>
