@@ -46,8 +46,19 @@ export class AppComponent implements OnInit {
     console.log('estoy en el hook OnInit :-)');
   }
 
+
   eliminarContacto(nombre: string): void {
     console.log(nombre);
+    // Para eliminar un contacto lo que hacemos es
+    // filtrar la colección y quedarnos con todos
+    // aquellos que no sean el indicado
+
+    // la funcion filter itera por los elementos del array
+    // y se queda con los elementos que returnen true
+    // en este caso los nombres diferentes al nombre que
+    // hemos pulsado.
+    this.nombres = this.nombres.filter(n => n !== nombre);
+
   }
 
 }
