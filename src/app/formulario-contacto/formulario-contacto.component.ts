@@ -23,14 +23,14 @@ export class FormularioContactoComponent {
     // Para crear un nuevo 'FormGroup' debemos indicar en un objeto JSON
     // las propiiedades que recogeremos del formulario HTML
     this.formulario = this._formBuilder.group({
-      nombre: '',
-      apellidos: ''
+      nombre: 'Pablito',
+      apellidos: 'Perez'
     });
   }
 
   guardarContacto(): void {
     // Tenemos disponible los valores que el susuario indica en un 
-    // formulario 
+    // formulario a traves de la propiedad value del FormGroup
     console.log(this.formulario.value);
   }
 
