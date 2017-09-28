@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ListaContactosComponent } from './lista-contactos/lista-contactos.component';
 import { ContactosService } from './contactos.service';
+import { FormularioContactoComponent } from './formulario-contacto/formulario-contacto.component';
 
 // usamos el decorador 'NgModle' para que la clase decorada
 // se comporte como un modulo
@@ -12,7 +13,8 @@ import { ContactosService } from './contactos.service';
   // componentes, pipes y directivas de mi aplicación.
   declarations: [
     AppComponent,
-    ListaContactosComponent
+    ListaContactosComponent,
+    FormularioContactoComponent
   ],
   // En el metadato 'imports' indicamos todos aquellos 
   // módulos de los cuáles mi aplicación depende
