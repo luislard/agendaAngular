@@ -22,7 +22,14 @@ import { ContactosService } from './contactos.service';
   //  en el metadato 'providers' indicamos todos aquellos 
   // proveedores de clase o valores que puedan ser inyectados.
   providers: [
-    ContactosService
+    // ContactosService
+    {
+      provide: ContactosService,
+      deps: [HttpClient], // hay que importarlo
+      useFactory: (http) => {
+        return new ContactosService(http);
+      }
+    }
   ],
   // En el metadato 'bootstrap' indicamos el componente raíz
   // a partir del cuál se construyr toda la aplicación.
