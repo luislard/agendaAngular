@@ -25,8 +25,9 @@ import { ContactosService } from './contactos.service';
     // ContactosService
     {
       provide: ContactosService,
-      useFactory: () => {
-        return new ContactosService([]);
+      deps: [HttpClient], // hay que importarlo
+      useFactory: (http) => {
+        return new ContactosService(http);
       }
     }
   ],
