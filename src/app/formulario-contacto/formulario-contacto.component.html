@@ -9,14 +9,14 @@
   <div>
     <label for="">Nombre</label>
     <input type="text" formControlName="nombre">
-    <span *ngIf="formulario.get('nombre').invalid">
+    <span *ngIf="formulario.get('nombre').touched && formulario.get('nombre').invalid">
       No cumple
     </span>
   </div>
   <div>
     <label for="">Apellidos</label>
     <input type="text" formControlName="apellidos">
-    <span *ngIf="formulario.get('apellidos').invalid">
+    <span *ngIf="formulario.get('apellidos').touched && formulario.get('apellidos').invalid">
       No cumple
     </span>
   </div>
