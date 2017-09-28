@@ -1,3 +1,15 @@
-<p>
-  formulario-contacto works!
-</p>
+<form 
+  [formGroup]="formulario" 
+  (ngSubmit)="guardarContacto()">
+  <div>
+    <label for="">Nombre</label>
+    <input type="text" formControlName="nombre">
+  </div>
+  <div>
+    <label for="">Apellidos</label>
+    <input type="text" formControlName="apellidos">
+  </div>
+  <div>
+    <button type="submit">Guardar Contacto</button>
+  </div>
+</form>

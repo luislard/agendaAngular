@@ -22,4 +22,8 @@ export class FormularioContactoComponent {
     });
   }
 
+  guardarContacto(): void {
+    console.log(this.formulario.value);
+  }
+
 }
