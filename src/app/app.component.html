@@ -1,6 +1,9 @@
 <header>
   <h1>Agenda</h1>
 </header>
+
+<app-formulario-contacto
+(botonGuardarPulsado)="crearContacto($event)"></app-formulario-contacto>
 <!-- 
   Para evaluar el valor de un atributo previamente 
   a su asignación, debemos poner 
@@ -8,10 +11,6 @@
   Si queremos recoger los datos que vienen dados en un evento,
   utilizamos la pabra reservada '$event'
 --> 
-
-<app-formulario-contacto>
-  
-</app-formulario-contacto>
 <app-lista-contactos 
 [contactos]="nombres"
 (botonEliminarPulsado)="eliminarContacto($event)">

@@ -38,4 +38,8 @@ export class ContactosService {
     this._nombres = this._nombres.filter(n => n.id !== nombre.id);
 
   }
+
+  agregarContacto(contacto: Contacto): void {
+    this._nombres.push(contacto);
+  }
 }
