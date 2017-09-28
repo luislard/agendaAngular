@@ -6,7 +6,6 @@ import { Contacto } from './contacto';
 @Injectable()
 export class ContactosService {
 
-  constructor (private _http: HttpClient) {}
   // por convención si no ponemos private el atributo es public, 
   // por convención si algo es privado colocamos el prefijo _<nombre>.
   // se pone en privado para que nadie pueda modificarlos
@@ -38,5 +37,9 @@ export class ContactosService {
     // hemos pulsado.
     this._nombres = this._nombres.filter(n => n.id !== nombre.id);
 
+  }
+
+  agregarContacto(contacto: Contacto): void {
+    this._nombres.push(contacto);
   }
 }
