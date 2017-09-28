@@ -1,7 +1,7 @@
 // formulario-contacto.component.ts
 
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-formulario-contacto',
@@ -23,8 +23,8 @@ export class FormularioContactoComponent {
     // Para crear un nuevo 'FormGroup' debemos indicar en un objeto JSON
     // las propiiedades que recogeremos del formulario HTML
     this.formulario = this._formBuilder.group({
-      nombre: 'Pablito',
-      apellidos: 'Perez'
+      nombre: ['', [Validators.required, Validators.minLength(3)]],
+      apellidos: ['', Validators.required]
     });
   }
 
