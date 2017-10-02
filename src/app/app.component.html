@@ -1,12 +1,20 @@
 <header>
   <h1>Agenda</h1>
 </header>
+<!-- 
+  Barra de navegación 
+  En la directiva RouterLinkk indicamos la ruta
+ --> 
+<nav>
+  <ul>
+    <li><a routerLink="/lista-contactos">Mis contactos</a></li>
+    <li><a routerLink="/nuevo-contacto">Nuevo Contacto</a></li>
+  </ul>
+</nav>
+
 <!-- Cona dinámica -->
 <router-outlet></router-outlet> 
-<!-- 
-<app-formulario-contacto
-(botonGuardarPulsado)="crearContacto($event)"></app-formulario-contacto>
---> 
+
 <!-- 
   Para evaluar el valor de un atributo previamente 
   a su asignación, debemos poner 
