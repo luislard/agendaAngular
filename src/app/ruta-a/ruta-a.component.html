@@ -1,4 +1,16 @@
-<app-lista-contactos 
-[contactos]="nombres"
-(botonEliminarPulsado)="eliminarContacto($event)">
-</app-lista-contactos>
+<div class="row">
+    <div class="six columns">
+        <app-lista-contactos 
+        [contactos]="nombres"
+        (contactoSeleccionado)="verDetalles($event)"
+        (botonEliminarPulsado)="eliminarContacto($event)">
+        </app-lista-contactos>
+    </div>
+    <div class="six columns">
+        <app-detalles-contacto
+        [contacto]="contactoSeleccionado">
+        </app-detalles-contacto>
+    </div>
+</div>
+
+

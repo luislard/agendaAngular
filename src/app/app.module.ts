@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms'
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RutaAComponent } from './ruta-a/ruta-a.component';
 import { RutaBComponent } from './ruta-b/ruta-b.component';
+import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
 
 // usamos el decorador 'NgModle' para que la clase decorada
 // se comporte como un modulo
@@ -20,7 +21,8 @@ import { RutaBComponent } from './ruta-b/ruta-b.component';
     ListaContactosComponent,
     FormularioContactoComponent,
     RutaAComponent,
-    RutaBComponent
+    RutaBComponent,
+    DetallesContactoComponent
   ],
   // En el metadato 'imports' indicamos todos aquellos 
   // módulos de los cuáles mi aplicación depende

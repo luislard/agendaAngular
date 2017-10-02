@@ -5,7 +5,7 @@
     etiquetas HTML sobre la cuál se esta usando.
   -->
   <li *ngFor="let contacto of contactos" 
-  >
+    (click)="notificarSeleccionContacto(contacto)">
     {{ contacto.nombre }} {{ contacto.apellidos }}
     <!-- 
       La suscripcion a eventos se hace poniendo entre parentesis 
