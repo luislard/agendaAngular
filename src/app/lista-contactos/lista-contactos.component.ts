@@ -13,6 +13,7 @@ export class ListaContactosComponent {
   // este evento debe ser un 'EventEmitter' del 
   // tipo deseado
   @Output() botonEliminarPulsado = new EventEmitter<Contacto>();
+  @Output() contactoSeleccionado = new EventEmitter<Contacto>();
 
   // definimos los contactos como un array de string
   // Con el decorador 'Input' exponemos un atributo para que
@@ -23,5 +24,9 @@ export class ListaContactosComponent {
     // Nitificamos datos al componente oadre gracias a
     // la función 'emit' de nuestro 'EventEmitter'
     this.botonEliminarPulsado.emit(contacto);
+  }
+  notificarSeleccionContacto(contacto: Contacto): void {
+    console.log('heloooooowww');
+    this.contactoSeleccionado.emit(contacto);
   }
 }
