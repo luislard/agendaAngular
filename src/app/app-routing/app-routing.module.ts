@@ -7,17 +7,17 @@ import { RutaBComponent } from '../ruta-b/ruta-b.component';
 
 const rutas: Routes = [
   {
-    path: '**',
-    pathMatch: 'full',
-    redirectTo: '/lista-contactos'
-  },
-  {
     path: 'lista-contactos',
     component: RutaAComponent
   },
   {
     path: 'nuevo-contacto',
     component: RutaBComponent
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    redirectTo: '/lista-contactos'
   }
 ];
 
