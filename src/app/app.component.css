@@ -16,3 +16,7 @@ a {
     border: 1px solid #1EAEDB;
     text-decoration: none;
 }
+
+a.seleccionada {
+    border-bottom: 1px solid #fff;
+}
