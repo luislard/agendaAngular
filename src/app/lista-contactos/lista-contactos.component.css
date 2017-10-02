@@ -1,10 +1,13 @@
-.rojo {
-    color: red;
-}
-.verde {
-    color: green;
+ul {
+    list-style: none;
 }
 
-.italicas {
-    font-style: italic;
+li {
+    margin: 0;
+    padding: 6px 14px; 
+}
+
+li:hover {
+    background: lightgray;
+    cursor: pointer;
 }
