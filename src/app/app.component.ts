@@ -18,7 +18,7 @@ import { Contacto } from './contacto'
 })
 export class AppComponent implements OnInit {
 
-  nombres: Contacto[];
+  
 
   // para hacer la inyección de dependencias de un servicio debemos
   // hacerlo en el constructor de la clase. Anotamos un parámetro
@@ -26,19 +26,6 @@ export class AppComponent implements OnInit {
   // añadimos el modificador de acceso correspondiente al parámetro
   constructor(private _contactosService: ContactosService){
     console.log('Componente instanciado y servicio inyectado');
-  }
-
-  // el hook 'OnInit' se ejecuta cuando el componente tiene
-  // asociado su template correspondiente, por lo tanto es 
-  // el momento ideal para enlazar datos entre ellos
-  ngOnInit(): void {
-    console.log('estoy en el hook OnInit :-)');
-    this.nombres = this._contactosService.obtenerContactos();
-  }
-
-  eliminarContacto(nombre: Contacto): void {
-    this._contactosService.eliminarContacto(nombre);
-    this.nombres = this._contactosService.obtenerContactos();
   }
 
   crearContacto(contacto: Contacto): void {
