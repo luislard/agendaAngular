@@ -1,4 +1,18 @@
-<app-lista-contactos 
-[contactos]="nombres"
-(botonEliminarPulsado)="eliminarContacto($event)">
-</app-lista-contactos>
+<div class="row">
+    <div class="six columns">
+        <app-lista-contactos 
+        [contactos]="contactos$ | async"
+        (contactoSeleccionado)="verDetalles($event)"
+        (botonEliminarPulsado)="eliminarContacto($event)">
+        </app-lista-contactos>
+    </div>
+    <div class="six columns">
+        <app-detalles-contacto
+        [contacto]="contactoSeleccionado"
+        (botonFacebookPulsado)="verPerfil($event)"
+        (botonTwitterPulsado)="verPerfil($event)">
+        </app-detalles-contacto>
+    </div>
+</div>
+
+

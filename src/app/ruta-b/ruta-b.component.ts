@@ -20,7 +20,10 @@ export class RutaBComponent {
   crearContacto(contacto: Contacto): void {
     this._contactosService.agregarContacto(contacto);
     // this._router.navigate(['a','b','c']); // /a/b/c
-    this._router.navigate(['lista-contacto']);
+    // this._router.navigate(['lista-contacto']);
+    this._contactosService
+      .agregarContacto(contacto)
+      .subscribe( () => this._router.navigate(['/lista-contactos']));
   }
 
 }
