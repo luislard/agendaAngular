@@ -3,12 +3,16 @@
   <h4>{{ contacto.nombre }} {{ contacto.apellidos }}</h4>
   <hr>
   <!-- Redes Sociales -->
-  <button type=""
-  (click)="notificarNavegacionFacebook()">
+  <button 
+    *ngIf="contacto.facebook"
+    type=""
+    (click)="notificarNavegacionFacebook()">
     <i class="fa fa-facebook-square" aria-hidden="true"></i>
   </button>
-  <button type=""
-  (click)="notificarNavegacionTwitter()">
+  <button 
+    *ngIf="contacto.twitter"
+    type=""
+    (click)="notificarNavegacionTwitter()">
     <i class="fa fa-twitter-square" aria-hidden="true"></i>
   </button>
   <hr>

@@ -14,10 +14,22 @@ export class DetallesContactoComponent {
   @Output() botonTwitterPulsado = new EventEmitter<string>();
 
   notificarNavegacionFacebook(): void {
-    this.botonFacebookPulsado.emit('');
+    this.botonFacebookPulsado.emit(this._construirRutaFacebook());
   }
   notificarNavegacionTwitter(): void {
-    this.botonTwitterPulsado.emit('');
+    this.botonTwitterPulsado.emit(this._construirRutaTwitter());
+  }
+
+  _construirRutaFacebook(): string {
+    console.log('face');
+        return this.contacto.facebook
+        ? `https://www.facebook.com/${this.contacto.facebook}`
+        : null;
+    }
+  _construirRutaTwitter(): string {
+      return this.contacto.twitter
+      ? `https://twitter.com/${this.contacto.twitter}`
+      : null;
   }
 
 }
