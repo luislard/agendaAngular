@@ -1,7 +1,7 @@
 <div class="row">
     <div class="six columns">
         <app-lista-contactos 
-        [contactos]="nombres"
+        [contactos]="contactos$ | async"
         (contactoSeleccionado)="verDetalles($event)"
         (botonEliminarPulsado)="eliminarContacto($event)">
         </app-lista-contactos>

@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RutaAComponent } from './ruta-a/ruta-a.component';
 import { RutaBComponent } from './ruta-b/ruta-b.component';
 import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto.component';
+import { HttpClientModule } from '@angular/common/http';
 
 // usamos el decorador 'NgModle' para que la clase decorada
 // se comporte como un modulo
@@ -29,7 +30,8 @@ import { DetallesContactoComponent } from './detalles-contacto/detalles-contacto
   imports: [
     BrowserModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   //  en el metadato 'providers' indicamos todos aquellos 
   // proveedores de clase o valores que puedan ser inyectados.
