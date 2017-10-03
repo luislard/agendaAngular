@@ -1,14 +1,16 @@
 <div class="row">
     <div class="six columns">
         <app-lista-contactos 
-        [contactos]="nombres"
+        [contactos]="contactos$ | async"
         (contactoSeleccionado)="verDetalles($event)"
         (botonEliminarPulsado)="eliminarContacto($event)">
         </app-lista-contactos>
     </div>
     <div class="six columns">
         <app-detalles-contacto
-        [contacto]="contactoSeleccionado">
+        [contacto]="contactoSeleccionado"
+        (botonFacebookPulsado)="verPerfil($event)"
+        (botonTwitterPulsado)="verPerfil($event)">
         </app-detalles-contacto>
     </div>
 </div>
