@@ -29,19 +29,9 @@ export class ContactosService {
 
   agregarContacto(contacto: Contacto): Observable<Contacto> {
 
-    const opciones = {
-      headers: new HttpHeaders()
-        .set('miSuperApiKey','8197263hgasj')
-        .set('Accept','application/json'),
-      params: new HttpParams()
-        .set('_sort','fechaPublicacion')
-        .set('_order','desc')
-        .set('userId',contacto.id.toString())
-    }
     return this._httpClient.post<Contacto>(
       `${environment.rutaApi}/contactos`, 
-      contacto,
-      opciones
+      contacto
     );
   }
 }
