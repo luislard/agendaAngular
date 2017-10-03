@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Contacto } from './contacto';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../environments/environment';
+
 
 // el decorador 'injectable' indica que la clase decorada 
 // debe comportarse como un servicio
@@ -27,9 +28,20 @@ export class ContactosService {
   }
 
   agregarContacto(contacto: Contacto): Observable<Contacto> {
+
+    const opciones = {
+      headers: new HttpHeaders()
+        .set('miSuperApiKey','8197263hgasj')
+        .set('Accept','application/json'),
+      params: new HttpParams()
+        .set('_sort','fechaPublicacion')
+        .set('_order','desc')
+        .set('userId',contacto.id.toString())
+    }
     return this._httpClient.post<Contacto>(
       `${environment.rutaApi}/contactos`, 
-      contacto
+      contacto,
+      opciones
     );
   }
 }
