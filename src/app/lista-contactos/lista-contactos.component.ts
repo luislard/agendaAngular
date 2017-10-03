@@ -8,6 +8,8 @@ import { Contacto } from '../contacto';
 })
 export class ListaContactosComponent {
 
+  orden: string = 'asc';
+
   // con el decorador output exponemos un evento para que un 
   // componente padre pueda suscribirse a él. Además, 
   // este evento debe ser un 'EventEmitter' del 
@@ -28,5 +30,9 @@ export class ListaContactosComponent {
   notificarSeleccionContacto(contacto: Contacto): void {
     console.log('heloooooowww');
     this.contactoSeleccionado.emit(contacto);
+  }
+
+  cambiarOrden(): void {
+    this.orden = this.orden === 'asc' ? 'desc' : 'asc';
   }
 }
